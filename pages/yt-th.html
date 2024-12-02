@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Thumbnail Design</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <!-- AOS Library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+
+    <style>
+        .portfolio-container {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: flex-start;
+            gap: 2rem;
+            padding: 2rem;
+        }
+
+        .portfolio-content {
+            flex: 1;
+            max-width: 500px;
+        }
+
+        .portfolio-content h1 {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .portfolio-content h1 span {
+            color: var(--main-color);
+        }
+
+        .portfolio-content p {
+            font-size: 1.8rem;
+            line-height: 1.6;
+            color: var(--text-color);
+        }
+
+        .portfolio-thumbnails {
+            flex: 2;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+        }
+
+        .thumbnail-card {
+            background-color: var(--second-bg-color);
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+            text-align: center;
+            aspect-ratio: 16/9;
+        }
+
+        .thumbnail-card:hover {
+            transform: scale(1.05);
+        }
+
+        .thumbnail-card img {
+            width: 100%;
+            aspect-ratio: 2/1;
+            height: auto;
+            border-radius: 4px;
+            margin-bottom: 1rem;
+        }
+
+        .thumbnail-title {
+            font-size: 1.6rem;
+            font-weight: bold;
+            color: var(--text-color);
+        }
+
+        .back-button {
+            margin-top: 2rem;
+            padding: 1rem 2rem;
+            font-size: 1.6rem;
+            background-color: var(--main-color);
+            color: var(--text-color);
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .back-button:hover {
+            background-color: #d00000;
+        }
+
+        @media (max-width: 768px) {
+            .portfolio-container {
+                flex-direction: column;
+            }
+
+            .portfolio-thumbnails {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <div class="portfolio-container">
+            <!-- Left Content -->
+            <div class="portfolio-content" data-aos="fade-right">
+                <h1>YouTube Thumbnail <span>Design</span></h1>
+                <p>
+                    Welcome to my portfolio! Here, you'll find some of my best YouTube thumbnail designs tailored for
+                    PUBG Mobile enthusiasts.
+                    My designs emphasize attention-grabbing visuals with electrifying effects, glowing accents, and bold
+                    fonts.
+                    These thumbnails aim to enhance clickability and showcase a professional touch that aligns with
+                    gaming content trends.
+                </p>
+                <button class="back-button" onclick="history.back()">Back</button>
+            </div>
+
+            <!-- Right Thumbnails -->
+            <div class="portfolio-thumbnails" data-aos="fade-left">
+                <div class="thumbnail-card" data-aos="zoom-in" data-aos-delay="100">
+                    <img src="../img/PUBG 1.jpg" alt="PUBG Thumbnail 1">
+                    <p class="thumbnail-title">PUBG Mobile - Thunder and Glow</p>
+                </div>
+                <div class="thumbnail-card" data-aos="zoom-in" data-aos-delay="200">
+                    <img src="../img/PUBG 2.jpg" alt="PUBG Thumbnail 2">
+                    <p class="thumbnail-title">PUBG Mobile - Striking Lightning</p>
+                </div>
+                <div class="thumbnail-card" data-aos="zoom-in" data-aos-delay="300">
+                    <img src="../img/PUBG 3.jpg" alt="PUBG Thumbnail 3">
+                    <p class="thumbnail-title">PUBG Mobile - Bold Fonts and Glow</p>
+                </div>
+                <div class="thumbnail-card" data-aos="zoom-in" data-aos-delay="400">
+                    <img src="../img/PUBG 4.jpg" alt="PUBG Thumbnail 4">
+                    <p class="thumbnail-title">PUBG Mobile - Electrifying Action</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AOS Library Script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1200,
+            once: true,
+        });
+    </script>
+</body>
+
+</html>

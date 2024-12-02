@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fun Drawing - Ryuka</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <!-- AOS Library -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    <style>
+        .portfolio-detail-container {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 2rem;
+            padding: 2rem;
+        }
+
+        .portfolio-detail-content {
+            flex: 1;
+            max-width: 600px;
+        }
+
+        .portfolio-detail-content h2 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .portfolio-detail-content h2 span {
+            color: var(--main-color);
+        }
+
+        .portfolio-detail-content p {
+            font-size: 1.8rem;
+            line-height: 1.6;
+            color: var(--text-color);
+            margin-bottom: 2rem;
+        }
+
+        .portfolio-detail-image {
+            flex: 1;
+            max-width: 500px;
+        }
+
+        .portfolio-detail-image img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .back-button {
+            margin-top: 2rem;
+            padding: 1rem 2rem;
+            font-size: 1.6rem;
+            background-color: var(--main-color);
+            color: var(--text-color);
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .back-button:hover {
+            background-color: #d00000;
+        }
+
+        @media (max-width: 768px) {
+            .portfolio-detail-container {
+                flex-direction: column;
+            }
+
+            .portfolio-detail-image {
+                order: -1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- AOS Initialization -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+    <section>
+        <div class="portfolio-detail-container">
+            <!-- Left Content -->
+            <div class="portfolio-detail-content" data-aos="fade-right" data-aos-duration="1000">
+                <h2>Fun Drawing - <span>Ryuka</span></h2>
+                <p data-aos="fade-up" data-aos-delay="200">
+                    Meet Ryuka, a dynamic character brought to life through vibrant artistry and imaginative storytelling.
+                    In this piece, Ryuka unleashes his powerful lightning ability, radiating energy with electrifying yellow bolts that fill the scene with intensity and drama.
+                    The design blends bold strokes and glowing effects to emphasize the power and essence of the character.
+                </p>
+                <p data-aos="fade-up" data-aos-delay="400">
+                    This artwork reflects my passion for combining unique character design with vivid, energetic visuals.
+                    Each detail, from the flow of electricity to the determined expression on Ryuka's face, is crafted to captivate and inspire.
+                </p>
+                <button class="back-button" data-aos="zoom-in" data-aos-delay="600" onclick="history.back()">Back</button>
+            </div>
+
+            <!-- Right Image -->
+            <div class="portfolio-detail-image" data-aos="fade-left" data-aos-duration="1000">
+                <img src="../img/FUN DRAWING 1.jpg" alt="Ryuka Unleashing Lightning">
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Initialize AOS
+        AOS.init({
+            offset: 120, // offset (in px) from the original trigger point
+            delay: 0, // values from 0 to 3000, with step 50ms
+            duration: 1000, // values from 0 to 3000, with step 50ms
+            easing: 'ease-in-out', // default easing for AOS animations
+            once: true, // whether animation should happen only once - while scrolling down
+        });
+    </script>
+</body>
+
+</html>

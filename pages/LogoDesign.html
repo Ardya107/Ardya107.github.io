@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logo Design - Portfolio</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- AOS Library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+
+    <style>
+        .portfolio-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        section {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            align-items: center;
+            margin-bottom: 5rem;
+        }
+
+        section img {
+            flex: 1;
+            max-width: 500px;
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .section-content {
+            flex: 1;
+            padding: 1rem;
+        }
+
+        .section-content h4 {
+            font-size: 2.5rem;
+            color: var(--main-color);
+            margin-bottom: 1rem;
+        }
+
+        .section-content p {
+            font-size: 1.6rem;
+            line-height: 1.8;
+            margin-bottom: 2rem;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .button {
+            padding: 1rem 2rem;
+            font-size: 1.6rem;
+            background-color: var(--main-color);
+            color: var(--text-color);
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #d00000;
+        }
+
+        @media (max-width: 768px) {
+            section {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            section img {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="portfolio-container">
+        <!-- Section 1 -->
+        <section id="section1" data-aos="fade-up">
+            <img src="../img/GujuyoLogo.jpg" alt="Gujuyo Logo">
+            <div class="section-content">
+                <h4>Logo Design - Gujuyo</h4>
+                <p>
+                    The <strong>Gujuyo</strong> (Guava Juice Yoghurt) logo was designed during my Grade 12 entrepreneurship 
+                    class project for Group 1 in the <em>Prakarya Kewirausahaan</em> subject. The playful and minimal design 
+                    reflects the brand's fresh, sweet, and creamy essence, creating a recognizable and memorable visual identity.
+                </p>
+                <div class="buttons">
+                    <button class="button" onclick="history.back()">Back</button>
+                    <button class="button" onclick="document.getElementById('section2').scrollIntoView({behavior: 'smooth'})">
+                        Next
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2 -->
+        <section id="section2" data-aos="fade-up">
+            <img src="../img/CiburakLogo.jpg" alt="Ciburak Logo">
+            <div class="section-content">
+                <h4>Logo Design - Ciburak</h4>
+                <p>
+                    The <strong>Ciburak</strong> (Cireng Bumbu Rujak) logo was created during my Grade 11 entrepreneurship 
+                    class project for Group 2 in the <em>Prakarya Kewirausahaan</em> subject. The modern and minimalistic design 
+                    perfectly represents the spicy and tangy nature of the product, ensuring a strong and memorable brand identity.
+                </p>
+                <div class="buttons">
+                    <button class="button" onclick="document.getElementById('section1').scrollIntoView({behavior: 'smooth'})">
+                        Back
+                    </button>
+                    <button class="button" onclick="window.location.href='../index.html'">Home</button>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- AOS Library Script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1200,
+            once: true,
+        });
+    </script>
+</body>
+
+</html>
