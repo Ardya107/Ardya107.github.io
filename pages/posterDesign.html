@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poster Design</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- Box Icons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- GSAP Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <style>
+        .portfolio-detail-container {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 2rem;
+            padding: 2rem;
+        }
+
+        .portfolio-detail-content {
+            flex: 1;
+            max-width: 600px;
+        }
+
+        .portfolio-detail-content h2 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .portfolio-detail-content h2 span {
+            color: pink;
+        }
+
+        .portfolio-detail-content p {
+            font-size: 1.8rem;
+            line-height: 1.6;
+            color: var(--text-color);
+            margin-bottom: 2rem;
+        }
+
+        .portfolio-detail-image {
+            flex: 1;
+            max-width: 500px;
+        }
+
+        .portfolio-detail-image img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .back-button {
+            margin-top: 2rem;
+            padding: 1rem 2rem;
+            font-size: 1.6rem;
+            background-color: var(--main-color);
+            color: var(--text-color);
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .back-button:hover {
+            background-color: #d00000;
+        }
+
+        @media (max-width: 768px) {
+            .portfolio-detail-container {
+                flex-direction: column;
+            }
+
+            .portfolio-detail-image {
+                order: -1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <div class="portfolio-detail-container">
+            <!-- Left Content -->
+            <div class="portfolio-detail-content">
+                <h2>Poster Design - <span>Gujuyo</span></h2>
+                <p>
+                    This poster design was created as part of a high school entrepreneurship project for a brand named
+                    <strong>Gujuyo</strong>, short for Guava Juice Yoghurt. The poster showcases the essence of the product through vibrant
+                    visuals, a clean layout, and carefully chosen typography.
+                </p>
+                <p>
+                    The design features a bright and inviting color palette dominated by pink and white, reflecting the
+                    freshness and sweetness of guava juice combined with the creamy texture of yogurt. A bottle of Gujuyo takes
+                    center stage in the poster, surrounded by playful elements to enhance its appeal to the target audience.
+                </p>
+                <p>
+                    This project highlights my ability to transform branding concepts into impactful visuals that
+                    effectively communicate a message while captivating the audience.
+                </p>
+                <button class="back-button" onclick="history.back()">Back</button>
+            </div>
+
+            <!-- Right Image -->
+            <div class="portfolio-detail-image">
+                <img src="../img/Pink Orange Modern Promo Furniture Banner_20240218_173042_0000.png" alt="Gujuyo Poster Design">
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // GSAP Animations
+        gsap.registerPlugin(ScrollTrigger);
+
+        // Animation for Text Content
+        gsap.from(".portfolio-detail-content", {
+            opacity: 0,
+            x: -100,
+            duration: 1.5,
+            scrollTrigger: {
+                trigger: ".portfolio-detail-content",
+                start: "top 80%",
+                toggleActions: "play none none reset",
+            }
+        });
+
+        // Animation for Image
+        gsap.from(".portfolio-detail-image", {
+            opacity: 0,
+            x: 100,
+            duration: 1.5,
+            scrollTrigger: {
+                trigger: ".portfolio-detail-image",
+                start: "top 80%",
+                toggleActions: "play none none reset",
+            }
+        });
+
+        // Animation for Paragraphs
+        gsap.from(".portfolio-detail-content p", {
+            opacity: 0,
+            y: 50,
+            duration: 1,
+            stagger: 0.3,
+            scrollTrigger: {
+                trigger: ".portfolio-detail-content",
+                start: "top 80%",
+                toggleActions: "play none none reset",
+            }
+        });
+
+        // Animation for Back Button
+        gsap.from(".back-button", {
+            opacity: 0,
+            scale: 0.8,
+            duration: 1,
+            scrollTrigger: {
+                trigger: ".back-button",
+                start: "top 90%",
+                toggleActions: "play none none reset",
+            }
+        });
+    </script>
+</body>
+
+</html>

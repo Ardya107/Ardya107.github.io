@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Korean History Animation</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <!-- AOS Animation Library -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #1f242d;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+        }
+
+        section {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem;
+        }
+
+        .detail-container {
+            max-width: 800px;
+            text-align: center;
+            background-color: #323946;
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        .detail-container img {
+            width: 100%;
+            max-width: 500px;
+            border-radius: 8px;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        h4 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: #ff0000;
+        }
+
+        p {
+            font-size: 1.4rem;
+            line-height: 1.6;
+            margin-bottom: 2rem;
+            color: #fff;
+        }
+
+        .btn-group {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+        }
+
+        .btn {
+            font-size: 1.4rem;
+            padding: 0.8rem 1.5rem;
+            border-radius: 8px;
+            text-decoration: none;
+            color: #fff;
+            background-color: #ff0000;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #d00000;
+            transform: scale(1.05);
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <section>
+        <div class="detail-container" data-aos="fade-up" data-aos-duration="1000">
+            <img src="../img/koreaHistoryAnimation" alt="Korean History Illustration">
+            <h4>Korean History Animation</h4>
+            <p>
+                I create engaging animations exploring the rich history of Korea, blending storytelling with captivating
+                visuals. 
+                Each animation is shared on my YouTube channel to educate and inspire audiences. The content highlights 
+                aspects of both South Korea and North Korea, and the animations are crafted using Cartoon Animator 4.
+            </p>
+            <div class="btn-group">
+                <a href="../index.html" class="btn">Back</a>
+                <a href="https://youtube.com/shorts/fCUi4chcyD4?si=wfyEl28mS3G6hHe3" class="btn" target="_blank">Open Site</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- AOS Initialization -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init({
+            once: true, // Animations happen only once
+            duration: 1000, // Animation duration
+            offset: 100, // Offset from viewport
+        });
+    </script>
+</body>
+
+</html>
